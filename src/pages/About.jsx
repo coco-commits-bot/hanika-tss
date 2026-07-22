@@ -97,12 +97,48 @@ const trades = [
 ]
 
 const staff = [
-  { role: 'school manager', name: 'Ngiruwonsanga Deo', email: 'ngiruwonsangadeo@gmail.com' },
-  { role: 'Director of studies', name: 'Muhirwa David', email: 'muhirwadavid@gmail.com' },
-  { role: 'Director of discipline', name: 'john doe', email: 'johndoe@gmail.com' },
-  { role: 'Secretary', name: 'john doe', email: 'johndoe@gmail.com' },
-  { role: 'Accountable', name: 'john doe', email: 'johndoe@gmail.com' },
-  { role: 'recovery', name: 'john doe', email: 'johndoe@gmail.com' },
+  {
+    role: 'school manager',
+    name: 'Ngiruwonsanga Deo',
+    desc: 'Holding an A0 in Information Technology, Deo oversees the overall administration and strategic direction of Hanika TSS, ensuring smooth daily operations, staff coordination, and the continued growth of technical education at the school.',
+    email: 'ngiradeo10@gmail.com',
+    phone: '0788865671',
+  },
+  {
+    role: 'director of studies',
+    name: 'Muhirwa David',
+    desc: 'With an A0 in Information Technology and postgraduate studies, David leads academic planning and supervision at Hanika TSS, coordinating the curriculum, timetables, and teaching standards across all TVET trades.',
+    email: 'muhiadavid3@gmail.com',
+    phone: '0785189326',
+  },
+  {
+    role: 'accountant',
+    name: 'Uwase Nicole',
+    desc: 'Nicole holds an A0 in Accounting and manages the finance office, handling budgeting, reporting, and the accurate, transparent keeping of the school\'s financial records.',
+    email: 'nicouwase2001@gmail.com',
+    phone: '0784150774',
+  },
+  {
+    role: 'director of discipline',
+    name: 'Niyigena Sylvestre',
+    desc: 'An A2 graduate in Building Construction, Sylvestre is responsible for maintaining discipline and good conduct among students, fostering a respectful and orderly learning environment across the school.',
+    email: 'niyigenasylivesitry@gmail.com',
+    phone: '0783487800',
+  },
+  {
+    role: 'assistant accountant',
+    name: 'Dushimiyimana Rosine',
+    desc: 'Rosine holds an A0 in Accounting and supports the finance office with bookkeeping, transaction processing, and the day-to-day financial administration of the school.',
+    email: 'dushimiyimanarosine@gmail.com',
+    phone: '0780757756',
+  },
+  {
+    role: 'secretary',
+    name: 'Ishimwe Charlotte',
+    desc: 'Fluent in English, French, and Kinyarwanda following her A2 studies, Charlotte manages correspondence, records, and front-office communication for Hanika TSS.',
+    email: 'charlotteishimwe747@gmail.com',
+    phone: '0780650756',
+  },
 ]
 
 const marqueeBrands = [
@@ -287,12 +323,7 @@ export default function About() {
                 </div>
               </div>
               <div className={styles.butt}>
-                <p className={styles.descr}>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
-                  ducimus, fugit cum ratione non similique voluptate officia eius
-                  voluptatum tempore, fuga, facilis numquam. Saepe molestias sit
-                  mollitia amet rerum explicabo.
-                </p>
+                <p className={styles.descr}>{person.desc}</p>
                 <div className={styles.contacts}>
                   <div className={styles.contactIcon}>
                     <i className="fas fa-envelope" title="email address"></i>
@@ -300,7 +331,7 @@ export default function About() {
                   </div>
                   <div className={styles.contactIcon}>
                     <i className="fas fa-phone" title="phone number"></i>
-                    <p className={styles.email}>0788888888</p>
+                    <p className={styles.email}>{person.phone}</p>
                   </div>
                 </div>
               </div>
