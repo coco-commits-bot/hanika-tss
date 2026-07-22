@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
-import profiles from '../assets/images/profiles.jpg'
+import avatarFemale from '../assets/images/avatar-female.jpg'
+import avatarMale from '../assets/images/avatar-male.jpg'
 import academic9 from '../assets/images/academic-9.png'
 import academic11 from '../assets/images/academic-11.png'
 import academic10 from '../assets/images/academic-10.png'
@@ -100,6 +101,7 @@ const staff = [
   {
     role: 'school manager',
     name: 'Ngiruwonsanga Deo',
+    gender: 'male',
     desc: 'Holding an A0 in Information Technology, Deo oversees the overall administration and strategic direction of Hanika TSS, ensuring smooth daily operations, staff coordination, and the continued growth of technical education at the school.',
     email: 'ngiradeo10@gmail.com',
     phone: '0788865671',
@@ -107,6 +109,7 @@ const staff = [
   {
     role: 'director of studies',
     name: 'Muhirwa David',
+    gender: 'male',
     desc: 'With an A0 in Information Technology and postgraduate studies, David leads academic planning and supervision at Hanika TSS, coordinating the curriculum, timetables, and teaching standards across all TVET trades.',
     email: 'muhiadavid3@gmail.com',
     phone: '0785189326',
@@ -114,6 +117,7 @@ const staff = [
   {
     role: 'accountant',
     name: 'Uwase Nicole',
+    gender: 'female',
     desc: 'Nicole holds an A0 in Accounting and manages the finance office, handling budgeting, reporting, and the accurate, transparent keeping of the school\'s financial records.',
     email: 'nicouwase2001@gmail.com',
     phone: '0784150774',
@@ -121,6 +125,7 @@ const staff = [
   {
     role: 'director of discipline',
     name: 'Niyigena Sylvestre',
+    gender: 'male',
     desc: 'An A2 graduate in Building Construction, Sylvestre is responsible for maintaining discipline and good conduct among students, fostering a respectful and orderly learning environment across the school.',
     email: 'niyigenasylivesitry@gmail.com',
     phone: '0783487800',
@@ -128,6 +133,7 @@ const staff = [
   {
     role: 'assistant accountant',
     name: 'Dushimiyimana Rosine',
+    gender: 'female',
     desc: 'Rosine holds an A0 in Accounting and supports the finance office with bookkeeping, transaction processing, and the day-to-day financial administration of the school.',
     email: 'dushimiyimanarosine@gmail.com',
     phone: '0780757756',
@@ -135,6 +141,7 @@ const staff = [
   {
     role: 'secretary',
     name: 'Ishimwe Charlotte',
+    gender: 'female',
     desc: 'Fluent in English, French, and Kinyarwanda following her A2 studies, Charlotte manages correspondence, records, and front-office communication for Hanika TSS.',
     email: 'charlotteishimwe747@gmail.com',
     phone: '0780650756',
@@ -315,7 +322,10 @@ export default function About() {
             <div className={styles.elder} key={`${person.name}-${i}`}>
               <div className={styles.tops}>
                 <div className={styles.profile}>
-                  <img src={profiles} alt={person.name} />
+                  <img
+                    src={person.gender === 'female' ? avatarFemale : avatarMale}
+                    alt={person.name}
+                  />
                 </div>
                 <div className={styles.logs}>
                   <div className={styles.headings}>{person.role}</div>
