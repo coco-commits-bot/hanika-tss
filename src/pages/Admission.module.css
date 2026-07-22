@@ -1,0 +1,118 @@
+.head {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  background: url('../assets/images/academic-16.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: brightness(0.3);
+}
+
+.title {
+  font-size: 50px;
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 20px;
+}
+
+.title span {
+  color: #0000;
+}
+
+.subTitle {
+  color: #eef;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.subTitle span {
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.card {
+  max-width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0001;
+}
+
+.card i {
+  font-size: 40px;
+  color: #782683;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid #782683;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-size: 22px;
+  color: #782683;
+  -webkit-text-stroke: 1px #782683;
+  text-transform: capitalize;
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: #555;
+  line-height: 20px;
+}
+
+.link {
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.link button {
+  padding: 15px 30px;
+  background: #782683;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+  text-transform: capitalize;
+  border-radius: 50px;
+  letter-spacing: 1px;
+}
+
+.link button:hover {
+  background: #ffb9ea;
+  color: #782683;
+}
+
+@media (max-width: 598px) {
+  .title {
+    font-size: 35px;
+  }
+}

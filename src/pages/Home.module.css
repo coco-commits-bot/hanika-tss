@@ -1,0 +1,131 @@
+.head {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  background: url('../assets/images/academic-15.jpeg');
+  background-size: cover;
+  background-position: center;
+  animation: bg 15s linear infinite;
+}
+
+@keyframes bg {
+  0%,
+  15% {
+    background-image: url('../assets/images/academic-12.jpeg');
+  }
+  20%,
+  35% {
+    background-image: url('../assets/images/academic-13.jpeg');
+  }
+  40%,
+  55% {
+    background-image: url('../assets/images/academic-14.jpeg');
+  }
+  60%,
+  75% {
+    background-image: url('../assets/images/academic-15.jpeg');
+  }
+  80%,
+  95% {
+    background-image: url('../assets/images/academic-16.jpeg');
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: brightness(0.3);
+}
+
+.content .logo img {
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 50px;
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 20px;
+}
+
+.title span {
+  color: #0000;
+}
+
+.subTitle {
+  width: 70%;
+  margin: 0 auto;
+  color: #eef;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.quotes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 60px 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 85%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+
+.icon {
+  background: #782683;
+  border-radius: 20px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  color: #782683;
+  text-transform: capitalize;
+  -webkit-text-stroke: 1px #782683;
+  letter-spacing: 2px;
+}
+
+.desc {
+  font-size: 13px;
+  color: #445;
+  text-align: center;
+}
+
+@media (max-width: 598px) {
+  .content .logo img {
+    height: 130px;
+  }
+  .title {
+    font-size: 35px;
+  }
+  .subTitle {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}

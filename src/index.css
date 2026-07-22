@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Century Gothic', 'Poppins', 'Segoe UI', sans-serif;
+  transition: 0.3s;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: auto;
+  -webkit-text-stroke: 1px;
+  background: #78268355;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  background: #f6eef7;
+  user-select: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
