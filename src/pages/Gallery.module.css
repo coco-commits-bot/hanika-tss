@@ -54,26 +54,23 @@
 }
 
 .card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   cursor: pointer;
   break-inside: avoid;
-  box-shadow: 0 2px 12px #0001;
 }
 
-.card:hover {
+.card:hover .bg {
   transform: scale(1.02);
 }
 
 .bg {
   width: 100%;
   display: block;
+  border-radius: 10px;
 }
 
 .desc {
-  padding: 14px 16px;
+  padding: 10px 4px 0 4px;
 }
 
 .text {
@@ -85,7 +82,7 @@
 
 .big {
   font-size: 13px;
-  color: #444;
+  color: #555;
   text-transform: capitalize;
 }
 
