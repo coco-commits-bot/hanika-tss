@@ -220,6 +220,119 @@
   color: #782683;
 }
 
+/* ---- FAQ Modal ---- */
+.faqModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: #000a;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.faqModal {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.faqModalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.faqModalTitle {
+  font-size: 18px;
+  color: #782683;
+  -webkit-text-stroke: 1px #782683;
+  text-transform: capitalize;
+}
+
+.faqModalClose {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #f2e6f4;
+  color: #782683;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faqModalClose:hover {
+  background: #782683;
+  color: #fff;
+}
+
+.faqList {
+  overflow-y: auto;
+  padding: 10px 24px;
+}
+
+.faqItem {
+  border-bottom: 1px solid #eee;
+  padding: 6px 0;
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+}
+
+.faqQuestion {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 14px 0;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+.faqQuestion i {
+  color: #782683;
+  font-size: 12px;
+  min-width: 12px;
+}
+
+.faqAnswer {
+  padding: 0 0 16px 0;
+  font-size: 13px;
+  color: #666;
+  line-height: 20px;
+}
+
+.faqModalFooter {
+  padding: 16px 24px 22px 24px;
+  font-size: 12px;
+  color: #777;
+  border-top: 1px solid #eee;
+}
+
+.faqModalLink {
+  color: #782683;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 @media (max-width: 900px) {
   .head {
     height: auto;
