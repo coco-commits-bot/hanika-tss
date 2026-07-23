@@ -238,16 +238,22 @@
         "caption": "Students in Practice \u2014 photo 2"
       },
       {
-        "file": "/gallery/gallery-57.jpg",
+        "file": "/gallery/gallery-59.jpg",
         "caption": "Students in Practice \u2014 photo 3"
+      }
+    ]
+  },
+  {
+    "key": "Teachers-meeting",
+    "title": "Teacher meeting",
+    "images": [
+      {
+        "file": "/gallery/gallery-57.jpg",
+        "caption": "Students in Practice \u2014 photo 1"
       },
       {
         "file": "/gallery/gallery-58.jpg",
-        "caption": "Students in Practice \u2014 photo 4"
-      },
-      {
-        "file": "/gallery/gallery-59.jpg",
-        "caption": "Students in Practice \u2014 photo 5"
+        "caption": "Students in Practice \u2014 photo 2"
       }
     ]
   },
