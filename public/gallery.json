@@ -1,275 +1,275 @@
 [
   {
-    "key": "campus",
-    "title": "Campus Life",
+    "key": "induction-ceremony",
+    "title": "Induction Ceremony",
     "images": [
       {
-        "file": "/gallery/gallery-01.jpg",
-        "caption": "Campus Life \u2014 photo 1"
-      },
-      {
-        "file": "/gallery/gallery-06.jpg",
-        "caption": "Campus Life \u2014 photo 2"
-      },
-      {
-        "file": "/gallery/gallery-11.jpg",
-        "caption": "Campus Life \u2014 photo 3"
-      },
-      {
-        "file": "/gallery/gallery-16.jpg",
-        "caption": "Campus Life \u2014 photo 4"
+        "file": "/gallery/gallery-20.jpg",
+        "caption": "Induction Ceremony \u2014 photo 1"
       },
       {
         "file": "/gallery/gallery-21.jpg",
-        "caption": "Campus Life \u2014 photo 5"
-      },
-      {
-        "file": "/gallery/gallery-26.jpg",
-        "caption": "Campus Life \u2014 photo 6"
-      },
-      {
-        "file": "/gallery/gallery-31.jpg",
-        "caption": "Campus Life \u2014 photo 7"
-      },
-      {
-        "file": "/gallery/gallery-36.jpg",
-        "caption": "Campus Life \u2014 photo 8"
-      },
-      {
-        "file": "/gallery/gallery-41.jpg",
-        "caption": "Campus Life \u2014 photo 9"
-      },
-      {
-        "file": "/gallery/gallery-46.jpg",
-        "caption": "Campus Life \u2014 photo 10"
-      },
-      {
-        "file": "/gallery/gallery-51.jpg",
-        "caption": "Campus Life \u2014 photo 11"
-      },
-      {
-        "file": "/gallery/gallery-56.jpg",
-        "caption": "Campus Life \u2014 photo 12"
-      },
-      {
-        "file": "/gallery/gallery-61.jpg",
-        "caption": "Campus Life \u2014 photo 13"
-      }
-    ]
-  },
-  {
-    "key": "academics",
-    "title": "Academics & Training",
-    "images": [
-      {
-        "file": "/gallery/gallery-02.jpg",
-        "caption": "Academics & Training \u2014 photo 1"
-      },
-      {
-        "file": "/gallery/gallery-07.jpg",
-        "caption": "Academics & Training \u2014 photo 2"
-      },
-      {
-        "file": "/gallery/gallery-12.jpg",
-        "caption": "Academics & Training \u2014 photo 3"
-      },
-      {
-        "file": "/gallery/gallery-17.jpg",
-        "caption": "Academics & Training \u2014 photo 4"
+        "caption": "Induction Ceremony \u2014 photo 2"
       },
       {
         "file": "/gallery/gallery-22.jpg",
-        "caption": "Academics & Training \u2014 photo 5"
-      },
-      {
-        "file": "/gallery/gallery-27.jpg",
-        "caption": "Academics & Training \u2014 photo 6"
-      },
-      {
-        "file": "/gallery/gallery-32.jpg",
-        "caption": "Academics & Training \u2014 photo 7"
-      },
-      {
-        "file": "/gallery/gallery-37.jpg",
-        "caption": "Academics & Training \u2014 photo 8"
-      },
-      {
-        "file": "/gallery/gallery-42.jpg",
-        "caption": "Academics & Training \u2014 photo 9"
-      },
-      {
-        "file": "/gallery/gallery-47.jpg",
-        "caption": "Academics & Training \u2014 photo 10"
-      },
-      {
-        "file": "/gallery/gallery-52.jpg",
-        "caption": "Academics & Training \u2014 photo 11"
-      },
-      {
-        "file": "/gallery/gallery-57.jpg",
-        "caption": "Academics & Training \u2014 photo 12"
-      }
-    ]
-  },
-  {
-    "key": "events",
-    "title": "Events & Ceremonies",
-    "images": [
-      {
-        "file": "/gallery/gallery-03.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 1"
-      },
-      {
-        "file": "/gallery/gallery-08.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 2"
-      },
-      {
-        "file": "/gallery/gallery-13.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 3"
-      },
-      {
-        "file": "/gallery/gallery-18.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 4"
+        "caption": "Induction Ceremony \u2014 photo 3"
       },
       {
         "file": "/gallery/gallery-23.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 5"
-      },
-      {
-        "file": "/gallery/gallery-28.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 6"
-      },
-      {
-        "file": "/gallery/gallery-33.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 7"
-      },
-      {
-        "file": "/gallery/gallery-38.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 8"
-      },
-      {
-        "file": "/gallery/gallery-43.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 9"
-      },
-      {
-        "file": "/gallery/gallery-48.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 10"
-      },
-      {
-        "file": "/gallery/gallery-53.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 11"
-      },
-      {
-        "file": "/gallery/gallery-58.jpg",
-        "caption": "Events & Ceremonies \u2014 photo 12"
-      }
-    ]
-  },
-  {
-    "key": "visits",
-    "title": "Guest Visits & Talks",
-    "images": [
-      {
-        "file": "/gallery/gallery-04.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 1"
-      },
-      {
-        "file": "/gallery/gallery-09.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 2"
-      },
-      {
-        "file": "/gallery/gallery-14.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 3"
-      },
-      {
-        "file": "/gallery/gallery-19.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 4"
+        "caption": "Induction Ceremony \u2014 photo 4"
       },
       {
         "file": "/gallery/gallery-24.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 5"
+        "caption": "Induction Ceremony \u2014 photo 5"
       },
       {
-        "file": "/gallery/gallery-29.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 6"
+        "file": "/gallery/gallery-25.jpg",
+        "caption": "Induction Ceremony \u2014 photo 6"
       },
       {
-        "file": "/gallery/gallery-34.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 7"
-      },
-      {
-        "file": "/gallery/gallery-39.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 8"
-      },
-      {
-        "file": "/gallery/gallery-44.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 9"
-      },
-      {
-        "file": "/gallery/gallery-49.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 10"
-      },
-      {
-        "file": "/gallery/gallery-54.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 11"
-      },
-      {
-        "file": "/gallery/gallery-59.jpg",
-        "caption": "Guest Visits & Talks \u2014 photo 12"
+        "file": "/gallery/gallery-26.jpg",
+        "caption": "Induction Ceremony \u2014 photo 7"
       }
     ]
   },
   {
-    "key": "activities",
-    "title": "Student Activities",
+    "key": "student-staff-handover",
+    "title": "Student-Staff Handover",
     "images": [
       {
+        "file": "/gallery/gallery-01.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 1"
+      },
+      {
+        "file": "/gallery/gallery-02.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 2"
+      },
+      {
+        "file": "/gallery/gallery-03.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 3"
+      },
+      {
+        "file": "/gallery/gallery-04.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 4"
+      },
+      {
         "file": "/gallery/gallery-05.jpg",
-        "caption": "Student Activities \u2014 photo 1"
+        "caption": "Student-Staff Handover \u2014 photo 5"
+      },
+      {
+        "file": "/gallery/gallery-06.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 6"
+      },
+      {
+        "file": "/gallery/gallery-07.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 7"
+      },
+      {
+        "file": "/gallery/gallery-08.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 8"
+      },
+      {
+        "file": "/gallery/gallery-09.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 9"
       },
       {
         "file": "/gallery/gallery-10.jpg",
-        "caption": "Student Activities \u2014 photo 2"
+        "caption": "Student-Staff Handover \u2014 photo 10"
+      },
+      {
+        "file": "/gallery/gallery-11.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 11"
+      },
+      {
+        "file": "/gallery/gallery-12.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 12"
+      },
+      {
+        "file": "/gallery/gallery-13.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 13"
+      },
+      {
+        "file": "/gallery/gallery-14.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 14"
       },
       {
         "file": "/gallery/gallery-15.jpg",
-        "caption": "Student Activities \u2014 photo 3"
+        "caption": "Student-Staff Handover \u2014 photo 15"
       },
       {
-        "file": "/gallery/gallery-20.jpg",
-        "caption": "Student Activities \u2014 photo 4"
+        "file": "/gallery/gallery-16.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 16"
       },
       {
-        "file": "/gallery/gallery-25.jpg",
-        "caption": "Student Activities \u2014 photo 5"
+        "file": "/gallery/gallery-17.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 17"
+      },
+      {
+        "file": "/gallery/gallery-18.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 18"
+      },
+      {
+        "file": "/gallery/gallery-27.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 19"
       },
       {
         "file": "/gallery/gallery-30.jpg",
-        "caption": "Student Activities \u2014 photo 6"
+        "caption": "Student-Staff Handover \u2014 photo 20"
+      },
+      {
+        "file": "/gallery/gallery-31.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 21"
+      },
+      {
+        "file": "/gallery/gallery-32.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 22"
+      },
+      {
+        "file": "/gallery/gallery-33.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 23"
+      },
+      {
+        "file": "/gallery/gallery-34.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 24"
       },
       {
         "file": "/gallery/gallery-35.jpg",
-        "caption": "Student Activities \u2014 photo 7"
+        "caption": "Student-Staff Handover \u2014 photo 25"
+      },
+      {
+        "file": "/gallery/gallery-36.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 26"
+      },
+      {
+        "file": "/gallery/gallery-41.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 27"
+      },
+      {
+        "file": "/gallery/gallery-42.jpg",
+        "caption": "Student-Staff Handover \u2014 photo 28"
+      }
+    ]
+  },
+  {
+    "key": "end-of-year-ceremony",
+    "title": "End of Year Ceremony",
+    "images": [
+      {
+        "file": "/gallery/gallery-28.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 1"
+      },
+      {
+        "file": "/gallery/gallery-29.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 2"
+      },
+      {
+        "file": "/gallery/gallery-37.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 3"
+      },
+      {
+        "file": "/gallery/gallery-38.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 4"
+      },
+      {
+        "file": "/gallery/gallery-39.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 5"
       },
       {
         "file": "/gallery/gallery-40.jpg",
-        "caption": "Student Activities \u2014 photo 8"
+        "caption": "End of Year Ceremony \u2014 photo 6"
+      },
+      {
+        "file": "/gallery/gallery-43.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 7"
+      },
+      {
+        "file": "/gallery/gallery-44.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 8"
       },
       {
         "file": "/gallery/gallery-45.jpg",
-        "caption": "Student Activities \u2014 photo 9"
+        "caption": "End of Year Ceremony \u2014 photo 9"
+      },
+      {
+        "file": "/gallery/gallery-46.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 10"
+      },
+      {
+        "file": "/gallery/gallery-47.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 11"
+      },
+      {
+        "file": "/gallery/gallery-48.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 12"
+      },
+      {
+        "file": "/gallery/gallery-49.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 13"
       },
       {
         "file": "/gallery/gallery-50.jpg",
-        "caption": "Student Activities \u2014 photo 10"
+        "caption": "End of Year Ceremony \u2014 photo 14"
       },
       {
+        "file": "/gallery/gallery-51.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 15"
+      },
+      {
+        "file": "/gallery/gallery-52.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 16"
+      },
+      {
+        "file": "/gallery/gallery-53.jpg",
+        "caption": "End of Year Ceremony \u2014 photo 17"
+      }
+    ]
+  },
+  {
+    "key": "students-in-practice",
+    "title": "Students in Practice",
+    "images": [
+      {
         "file": "/gallery/gallery-55.jpg",
-        "caption": "Student Activities \u2014 photo 11"
+        "caption": "Students in Practice \u2014 photo 1"
+      },
+      {
+        "file": "/gallery/gallery-56.jpg",
+        "caption": "Students in Practice \u2014 photo 2"
+      },
+      {
+        "file": "/gallery/gallery-57.jpg",
+        "caption": "Students in Practice \u2014 photo 3"
+      },
+      {
+        "file": "/gallery/gallery-58.jpg",
+        "caption": "Students in Practice \u2014 photo 4"
+      },
+      {
+        "file": "/gallery/gallery-59.jpg",
+        "caption": "Students in Practice \u2014 photo 5"
+      }
+    ]
+  },
+  {
+    "key": "school-daily-life",
+    "title": "School Daily Life",
+    "images": [
+      {
+        "file": "/gallery/gallery-19.jpg",
+        "caption": "School Daily Life \u2014 photo 1"
+      },
+      {
+        "file": "/gallery/gallery-54.jpg",
+        "caption": "School Daily Life \u2014 photo 2"
       },
       {
         "file": "/gallery/gallery-60.jpg",
-        "caption": "Student Activities \u2014 photo 12"
+        "caption": "School Daily Life \u2014 photo 3"
+      },
+      {
+        "file": "/gallery/gallery-61.jpg",
+        "caption": "School Daily Life \u2014 photo 4"
       }
     ]
   }
