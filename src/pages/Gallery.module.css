@@ -54,16 +54,17 @@
 }
 
 .card {
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 20px;
-  position: relative;
   cursor: pointer;
   break-inside: avoid;
+  box-shadow: 0 2px 12px #0001;
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .bg {
@@ -72,16 +73,7 @@
 }
 
 .desc {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 20px;
-  height: 200px;
-  background: linear-gradient(0deg, #000, #0000);
-  color: #ddd;
-  display: flex;
-  align-items: flex-end;
+  padding: 14px 16px;
 }
 
 .text {
@@ -92,8 +84,8 @@
 }
 
 .big {
-  font-size: 15px;
-  -webkit-text-stroke: 1px #fff;
+  font-size: 13px;
+  color: #444;
   text-transform: capitalize;
 }
 
@@ -156,45 +148,39 @@
 }
 
 .categoryCard {
-  position: relative;
-  aspect-ratio: 1 / 1;
+  background: #fff;
   border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 0 2px 12px #0001;
 }
 
 .categoryCard .bg {
-  height: 100%;
+  aspect-ratio: 4 / 3;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .categoryCard:hover .bg {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .categoryOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, #0000 40%, #000c 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  padding: 20px;
+  padding: 16px 18px;
   text-align: left;
-  color: #fff;
 }
 
 .categoryTitle {
-  font-size: 20px;
+  font-size: 18px;
   text-transform: capitalize;
-  -webkit-text-stroke: 1px #fff;
+  color: #782683;
+  -webkit-text-stroke: 1px #782683;
 }
 
 .categoryCount {
   font-size: 12px;
-  color: #ffb9ea;
+  color: #782683aa;
   margin-top: 5px;
 }
 
@@ -345,7 +331,7 @@
     font-size: 10px;
     line-height: 15px;
   }
-  .categoryCard {
+  .categoryCard .bg {
     aspect-ratio: 4 / 3;
   }
   .lightboxImage {
