@@ -179,10 +179,10 @@
   background: linear-gradient(180deg, #0000 40%, #000c 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
   padding: 20px;
-  text-align: center;
+  text-align: left;
   color: #fff;
 }
 
@@ -306,6 +306,9 @@
 }
 
 .lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   height: 50px;
   width: 50px;
   min-width: 50px;
@@ -327,11 +330,11 @@
 }
 
 .lightboxPrev {
-  margin-right: 20px;
+  left: 20px;
 }
 
 .lightboxNext {
-  margin-left: 20px;
+  right: 20px;
 }
 
 @media (max-width: 598px) {
@@ -345,17 +348,26 @@
   .categoryCard {
     aspect-ratio: 4 / 3;
   }
+  .lightboxImage {
+    max-height: 55vh;
+  }
   .lightboxNav {
+    top: auto;
+    bottom: 10px;
+    transform: none;
     height: 40px;
     width: 40px;
     min-width: 40px;
     font-size: 16px;
   }
   .lightboxPrev {
-    margin-right: 8px;
+    left: 10px;
   }
   .lightboxNext {
-    margin-left: 8px;
+    right: 10px;
+  }
+  .lightboxImageWrap {
+    padding-bottom: 55px;
   }
 }
 
