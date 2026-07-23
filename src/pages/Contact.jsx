@@ -5,13 +5,51 @@ import styles from './Contact.module.css'
 
 const initialForm = { name: '', email: '', phone: '', message: '' }
 
+const faqs = [
+  {
+    q: 'What TVET trades does Hanika TSS offer?',
+    a: 'We currently offer five trades: Automobile Technology (AUT), Software Development (SWD), Accounting (ACC), Building & Construction Services (BDC), and Electrical Technology (ELT), each combining classroom learning with hands-on workshop training.',
+  },
+  {
+    q: 'What are the admission requirements?',
+    a: "Admission is generally open to students who have completed lower secondary education. Specific requirements can vary by trade and intake — reach out via the contact form on this page and our team will guide you through what's needed for the intake you're interested in.",
+  },
+  {
+    q: 'Does the school offer boarding?',
+    a: 'For details on boarding availability, fees, and accommodation arrangements, please contact the school administration directly using the form below — this varies by trade and current capacity.',
+  },
+  {
+    q: 'What are the school hours?',
+    a: 'Classes generally run on weekdays during standard school hours, with practical workshop sessions scheduled alongside theory classes depending on the trade. Contact us for the exact timetable for your programme of interest.',
+  },
+  {
+    q: 'Do students get industrial attachment or work placement?',
+    a: 'Yes — as part of our competency-based training approach, students in relevant trades gain industrial attachment experience to build real-world skills alongside career guidance ahead of graduation.',
+  },
+  {
+    q: 'How can I reach the school administration directly?',
+    a: 'You can use the contact form on this page, or reach out to the relevant staff member directly — see the Administration Staff section on our About page for names, roles, and direct contact details.',
+  },
+]
+
 export default function Contact() {
   const [form, setForm] = useState(initialForm)
   const [sent, setSent] = useState(false)
+  const [faqOpen, setFaqOpen] = useState(false)
+  const [openIndex, setOpenIndex] = useState(0)
 
   useEffect(() => {
     document.title = 'Hanika TSS | Contact Us'
   }, [])
+
+  useEffect(() => {
+    if (!faqOpen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setFaqOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [faqOpen])
 
   const handleChange = (field) => (e) => {
     setForm((f) => ({ ...f, [field]: e.target.value }))
@@ -42,7 +80,7 @@ export default function Contact() {
             </div>
           </div>
           <div className={styles.right}>
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form className={styles.form} id="contactForm" onSubmit={handleSubmit}>
               <div className={styles.formTitle}>Contact us</div>
               <div className={styles.realForm}>
                 <div className={styles.input}>
@@ -106,10 +144,54 @@ export default function Contact() {
             Find and explore quick answers before contacting us.
           </div>
         </div>
-        <div className={styles.button}>
+        <div className={styles.button} onClick={() => setFaqOpen(true)}>
           explore <i className="fas fa-arrow-right"></i>
         </div>
       </div>
+
+      {faqOpen && (
+        <div className={styles.faqModalOverlay} onClick={() => setFaqOpen(false)}>
+          <div className={styles.faqModal} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.faqModalHeader}>
+              <div className={styles.faqModalTitle}>Frequently Asked Questions</div>
+              <button
+                className={styles.faqModalClose}
+                onClick={() => setFaqOpen(false)}
+                aria-label="Close"
+              >
+                <i className="fas fa-xmark"></i>
+              </button>
+            </div>
+            <div className={styles.faqList}>
+              {faqs.map((item, i) => (
+                <div className={styles.faqItem} key={item.q}>
+                  <button
+                    className={styles.faqQuestion}
+                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  >
+                    <span>{item.q}</span>
+                    <i className={`fas ${openIndex === i ? 'fa-minus' : 'fa-plus'}`}></i>
+                  </button>
+                  {openIndex === i && <div className={styles.faqAnswer}>{item.a}</div>}
+                </div>
+              ))}
+            </div>
+            <div className={styles.faqModalFooter}>
+              Still have a question we didn't cover?{' '}
+              <span
+                className={styles.faqModalLink}
+                onClick={() => {
+                  setFaqOpen(false)
+                  document.getElementById('contactForm')?.scrollIntoView({ behavior: 'smooth' })
+                }}
+              >
+                Ask us directly
+              </span>
+              .
+            </div>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
