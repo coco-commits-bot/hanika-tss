@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
-import avatarFemale from '../assets/images/avatar-female.png'
-import avatarMale from '../assets/images/avatar-male.png'
+import avatarFemale from '../assets/images/avatar-female.jpg'
+import avatarMale from '../assets/images/avatar-male.jpg'
 import academic9 from '../assets/images/academic-9.png'
 import academic11 from '../assets/images/academic-11.png'
 import academic10 from '../assets/images/academic-10.png'
@@ -100,7 +100,7 @@ const trades = [
 const staff = [
   {
     role: 'school manager',
-    name: 'NGIRUWONSANGA Deo',
+    name: 'Ngiruwonsanga Deo',
     gender: 'male',
     desc: 'As School Manager, Deo leads the overall administration of Hanika TSS, overseeing daily operations, staff coordination, and long-term planning to keep the school running smoothly and moving toward its goals.',
     email: 'ngiradeo10@gmail.com',
@@ -108,7 +108,7 @@ const staff = [
   },
   {
     role: 'director of studies',
-    name: 'MUHIRWA David',
+    name: 'Muhirwa David',
     gender: 'male',
     desc: 'As Director of Studies, David is in charge of academic planning and supervision at Hanika TSS, coordinating the curriculum, class timetables, and teaching standards across all TVET trades.',
     email: 'muhiadavid3@gmail.com',
@@ -116,7 +116,7 @@ const staff = [
   },
   {
     role: 'accountant',
-    name: 'UWASE Nicole',
+    name: 'Uwase Nicole',
     gender: 'female',
     desc: 'As Accountant, Nicole manages the school\'s finance office, handling budgeting, financial reporting, and the accurate, transparent keeping of all Hanika TSS financial records.',
     email: 'nicouwase2001@gmail.com',
@@ -124,7 +124,7 @@ const staff = [
   },
   {
     role: 'director of discipline',
-    name: 'NIYIGENA Sylvestre',
+    name: 'Niyigena Sylvestre',
     gender: 'male',
     desc: 'As Director of Discipline, Sylvestre is responsible for maintaining discipline and good conduct among students, fostering a respectful and orderly learning environment across the school.',
     email: 'niyigenasylivesitry@gmail.com',
@@ -132,7 +132,7 @@ const staff = [
   },
   {
     role: 'assistant accountant',
-    name: 'DUSHIMIYIMANA Rosine',
+    name: 'Dushimiyimana Rosine',
     gender: 'female',
     desc: 'As Assistant Accountant, Rosine supports the finance office with bookkeeping, transaction processing, and the day-to-day financial administration of the school.',
     email: 'dushimiyimanarosine@gmail.com',
@@ -140,7 +140,7 @@ const staff = [
   },
   {
     role: 'secretary',
-    name: 'ISHIMWE Charlotte',
+    name: 'Ishimwe Charlotte',
     gender: 'female',
     desc: 'As Secretary, Charlotte manages official correspondence, school records, and front-office communication, keeping information flowing smoothly between administration, staff, and visitors.',
     email: 'charlotteishimwe747@gmail.com',
@@ -251,9 +251,8 @@ export default function About() {
             </div>
             <div className={styles.quoteTitle}>vision</div>
             <div className={styles.desc}>
-              To be a center of excellence in technical and vocational education,
-              producing skilled professionals who contribute to the development of
-              our society.
+              To be an excellent polytechnic for holistic transformation in the
+              heart of Africa.
             </div>
           </div>
           <div className={styles.quoteCard}>
@@ -262,7 +261,7 @@ export default function About() {
             </div>
             <div className={styles.quoteTitle}>motto</div>
             <div className={styles.desc}>
-              Excellence in Technical Education and culture with values
+              Education, kindness and technical skills.
             </div>
           </div>
           <div className={styles.quoteCard}>
@@ -271,8 +270,11 @@ export default function About() {
             </div>
             <div className={styles.quoteTitle}>mission</div>
             <div className={styles.desc}>
-              To provide quality technical and vocational education and training
-              that meets the needs of the industry and society.
+              To provide and upgrade vocational and technical skills in order to
+              produce competent graduates on the labor market through innovation
+              and entrepreneurship, and to contribute to the education of
+              citizens of integrity, fulfilling human, spiritual, and
+              professional values.
             </div>
           </div>
         </div>
