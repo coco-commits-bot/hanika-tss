@@ -48,15 +48,18 @@ export default function Home() {
     <div>
       <div className={styles.head}>
         <div className={styles.slideshow}>
-          {heroImages.map((img, i) => (
-            <div
-              key={img}
-              className={`${styles.slide} ${i === activeSlide ? styles.slideActive : ''} ${
-                i % 2 === 0 ? styles.zoomIn : styles.zoomOut
-              }`}
-              style={{ backgroundImage: `url(${img})` }}
-            />
-          ))}
+          <div
+            className={styles.track}
+            style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+          >
+            {heroImages.map((img) => (
+              <div
+                key={img}
+                className={styles.slide}
+                style={{ backgroundImage: `url(${img})` }}
+              />
+            ))}
+          </div>
         </div>
         <Nav />
         <div className={styles.content}>
