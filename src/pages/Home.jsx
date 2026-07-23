@@ -16,17 +16,17 @@ const cards = [
   {
     icon: 'fa-eye',
     title: 'vision',
-    desc: 'To be a center of excellence in technical and vocational education, producing skilled professionals who contribute to the development of our society.',
+    desc: 'To be an excellent polytechnic for holistic transformation in the heart of Africa.',
   },
   {
     icon: 'fa-quote-left',
     title: 'motto',
-    desc: 'Excellence in Technical Education and culture with values',
+    desc: 'Education, kindness and technical skills.',
   },
   {
     icon: 'fa-flag',
     title: 'mission',
-    desc: 'To provide quality technical and vocational education and training that meets the needs of the industry and society.',
+    desc: 'To provide and upgrade vocational and technical skills in order to produce competent graduates on the labor market through innovation and entrepreneurship, and to contribute to the education of citizens of integrity, fulfilling human, spiritual, and professional values.',
   },
 ]
 
