@@ -1,33 +1,64 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
-import academic6 from '../assets/images/academic-6.jpg'
-import academic5 from '../assets/images/academic-5.jpg'
-import academic7 from '../assets/images/academic-7.jpg'
-import academic2 from '../assets/images/academic-2.webp'
-import academic4 from '../assets/images/academic-4.jpg'
-import academic3 from '../assets/images/academic-3.webp'
-import academic1 from '../assets/images/academic-1.webp'
 import styles from './Gallery.module.css'
 
-const items = [
-  { img: academic6, title: 'Cultural Festival', date: '16 Jan 2026' },
-  { img: academic5, title: 'Industry Visit', date: '29 May 2026' },
-  { img: academic6, title: 'Environmental Campaign', date: '5 Jun 2026' },
-  { img: academic7, title: 'Guest Lecture', date: '2 Mar 2026' },
-  { img: academic2, title: 'Awards Day', date: '23 Jul 2026' },
-  { img: academic4, title: 'Open Campus Tour', date: '4 Sep 2026' },
-  { img: academic3, title: 'Innovation Showcase', date: '7 Jul 2026' },
-  { img: academic6, title: 'Community Outreach', date: '28 Mar 2026' },
-  { img: academic1, title: 'Construction Practice', date: '19 Jun 2026' },
-  { img: academic4, title: 'Agriculture Practice', date: '15 Mar 2026' },
-  { img: academic4, title: 'Entrepreneurship Day', date: '30 Jan 2026' },
-]
-
 export default function Gallery() {
+  const [categories, setCategories] = useState([])
+  const [status, setStatus] = useState('loading') // loading | ready | error
+  const [activeCategory, setActiveCategory] = useState(null)
+  const [lightboxIndex, setLightboxIndex] = useState(null)
+
   useEffect(() => {
     document.title = 'Hanika TSS | School Gallery'
   }, [])
+
+  useEffect(() => {
+    fetch('/gallery.json')
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to load gallery data')
+        return res.json()
+      })
+      .then((data) => {
+        setCategories(data)
+        setStatus('ready')
+      })
+      .catch(() => setStatus('error'))
+  }, [])
+
+  const activeImages = activeCategory ? activeCategory.images : []
+
+  useEffect(() => {
+    if (lightboxIndex === null) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setLightboxIndex(null)
+      if (e.key === 'ArrowRight') showNext()
+      if (e.key === 'ArrowLeft') showPrev()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lightboxIndex, activeCategory])
+
+  const openCategory = (cat) => {
+    setActiveCategory(cat)
+    setLightboxIndex(null)
+  }
+
+  const backToCategories = () => {
+    setActiveCategory(null)
+    setLightboxIndex(null)
+  }
+
+  const showNext = () => {
+    setLightboxIndex((i) => (i === null ? null : (i + 1) % activeImages.length))
+  }
+
+  const showPrev = () => {
+    setLightboxIndex((i) =>
+      i === null ? null : (i - 1 + activeImages.length) % activeImages.length,
+    )
+  }
 
   return (
     <div>
@@ -43,19 +74,107 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className={styles.gallery}>
-        {items.map((item, i) => (
-          <div className={styles.card} key={`${item.title}-${i}`}>
-            <img src={item.img} className={styles.bg} alt={item.title} />
-            <div className={styles.desc}>
-              <div className={styles.text}>
-                <div className={styles.big}>{item.title}</div>
-                <div className={styles.small}>{item.date}</div>
+      {status === 'loading' && <div className={styles.statusMsg}>Loading gallery…</div>}
+      {status === 'error' && (
+        <div className={styles.statusMsg}>
+          Couldn't load the gallery right now — please try again shortly.
+        </div>
+      )}
+
+      {status === 'ready' && !activeCategory && (
+        <div className={styles.categoryGrid}>
+          {categories.map((cat) => (
+            <div
+              className={styles.categoryCard}
+              key={cat.key}
+              onClick={() => openCategory(cat)}
+            >
+              <img src={cat.images[0].file} className={styles.bg} alt={cat.title} loading="lazy" />
+              <div className={styles.categoryOverlay}>
+                <div className={styles.categoryTitle}>{cat.title}</div>
+                <div className={styles.categoryCount}>
+                  {cat.images.length} photo{cat.images.length > 1 ? 's' : ''}
+                </div>
               </div>
             </div>
+          ))}
+        </div>
+      )}
+
+      {status === 'ready' && activeCategory && (
+        <div className={styles.categoryView}>
+          <div className={styles.backRow}>
+            <button className={styles.backButton} onClick={backToCategories}>
+              <i className="fas fa-arrow-left"></i> all categories
+            </button>
+            <div className={styles.categoryHeading}>{activeCategory.title}</div>
           </div>
-        ))}
-      </div>
+          <div className={styles.gallery}>
+            {activeCategory.images.map((item, i) => (
+              <div
+                className={styles.card}
+                key={`${activeCategory.key}-${i}`}
+                onClick={() => setLightboxIndex(i)}
+              >
+                <img src={item.file} className={styles.bg} alt={item.caption} loading="lazy" />
+                <div className={styles.desc}>
+                  <div className={styles.text}>
+                    <div className={styles.big}>{item.caption}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {lightboxIndex !== null && activeCategory && (
+        <div className={styles.lightbox} onClick={() => setLightboxIndex(null)}>
+          <button
+            className={styles.lightboxClose}
+            onClick={() => setLightboxIndex(null)}
+            aria-label="Close"
+          >
+            <i className="fas fa-xmark"></i>
+          </button>
+
+          <button
+            className={`${styles.lightboxNav} ${styles.lightboxPrev}`}
+            onClick={(e) => {
+              e.stopPropagation()
+              showPrev()
+            }}
+            aria-label="Previous image"
+          >
+            <i className="fas fa-angle-left"></i>
+          </button>
+
+          <div className={styles.lightboxImageWrap} onClick={(e) => e.stopPropagation()}>
+            <img
+              src={activeImages[lightboxIndex].file}
+              alt={activeImages[lightboxIndex].caption}
+              className={styles.lightboxImage}
+            />
+            <div className={styles.lightboxCaption}>
+              {activeImages[lightboxIndex].caption}
+              <span className={styles.lightboxCounter}>
+                {lightboxIndex + 1} / {activeImages.length}
+              </span>
+            </div>
+          </div>
+
+          <button
+            className={`${styles.lightboxNav} ${styles.lightboxNext}`}
+            onClick={(e) => {
+              e.stopPropagation()
+              showNext()
+            }}
+            aria-label="Next image"
+          >
+            <i className="fas fa-angle-right"></i>
+          </button>
+        </div>
+      )}
 
       <div className={styles.badge}>
         <i className="fas fa-camera-retro"></i>
