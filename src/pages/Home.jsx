@@ -1,8 +1,16 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import logo from '../assets/images/haip-logo.png'
+import hero1 from '../assets/images/academic-12.jpeg'
+import hero2 from '../assets/images/academic-13.jpeg'
+import hero3 from '../assets/images/academic-14.jpeg'
+import hero4 from '../assets/images/academic-15.jpeg'
+import hero5 from '../assets/images/academic-16.jpeg'
 import styles from './Home.module.css'
+
+const heroImages = [hero1, hero2, hero3, hero4, hero5]
+const SLIDE_DURATION = 5000 // ms each image stays fully visible before crossfading
 
 const cards = [
   {
@@ -23,13 +31,33 @@ const cards = [
 ]
 
 export default function Home() {
+  const [activeSlide, setActiveSlide] = useState(0)
+
   useEffect(() => {
     document.title = 'Hanika TSS | Home'
+  }, [])
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide((i) => (i + 1) % heroImages.length)
+    }, SLIDE_DURATION)
+    return () => clearInterval(timer)
   }, [])
 
   return (
     <div>
       <div className={styles.head}>
+        <div className={styles.slideshow}>
+          {heroImages.map((img, i) => (
+            <div
+              key={img}
+              className={`${styles.slide} ${i === activeSlide ? styles.slideActive : ''} ${
+                i % 2 === 0 ? styles.zoomIn : styles.zoomOut
+              }`}
+              style={{ backgroundImage: `url(${img})` }}
+            />
+          ))}
+        </div>
         <Nav />
         <div className={styles.content}>
           <div className={styles.logo}>
