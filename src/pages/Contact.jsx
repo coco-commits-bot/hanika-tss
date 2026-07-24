@@ -5,6 +5,8 @@ import styles from './Contact.module.css'
 
 const initialForm = { name: '', email: '', phone: '', message: '' }
 
+const WEB3FORMS_ACCESS_KEY = '2ba01787-619f-4735-8867-a94ebf6e58c1'
+
 const faqs = [
   {
     q: 'What TVET trades does Hanika TSS offer?',
@@ -35,6 +37,8 @@ const faqs = [
 export default function Contact() {
   const [form, setForm] = useState(initialForm)
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState(false)
   const [faqOpen, setFaqOpen] = useState(false)
   const [openIndex, setOpenIndex] = useState(0)
 
@@ -55,13 +59,42 @@ export default function Contact() {
     setForm((f) => ({ ...f, [field]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (!form.name || !form.email || !form.message) return
-    // No backend is wired up yet — this just confirms receipt locally.
-    setSent(true)
-    setForm(initialForm)
-    setTimeout(() => setSent(false), 4000)
+
+    setSending(true)
+    setError(false)
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New message from ${form.name} — Hanika TSS website`,
+          from_name: 'Hanika TSS Website',
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+        }),
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        setSent(true)
+        setForm(initialForm)
+        setTimeout(() => setSent(false), 5000)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -126,11 +159,19 @@ export default function Contact() {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className={styles.submit}>
+                <button type="submit" className={styles.submit} disabled={sending}>
                   <i className="fas fa-paper-plane"></i>
-                  <p>send</p>
+                  <p>{sending ? 'sending…' : 'send'}</p>
                 </button>
-                {sent && <div className={styles.sentMsg}>Thanks — your message has been received!</div>}
+                {sent && (
+                  <div className={styles.sentMsg}>Thanks — your message has been sent!</div>
+                )}
+                {error && (
+                  <div className={styles.errorMsg}>
+                    Something went wrong sending your message. Please try again, or reach out
+                    directly using the details on our About page.
+                  </div>
+                )}
               </div>
             </form>
           </div>
