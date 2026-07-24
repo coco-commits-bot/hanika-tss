@@ -50,7 +50,7 @@ export default function Footer() {
           </a>
           <a
             style={{ textDecoration: 'none' }}
-            href="mailto:cocotelecomservices@gmail.com"
+            href="mailto:hanikaaip5@gmail.com"
             className={styles.social}
           >
             <i className="fas fa-envelope"></i>
